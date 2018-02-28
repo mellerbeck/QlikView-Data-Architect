@@ -1,0 +1,1 @@
+# QlikView-Data-Architect
