@@ -82,11 +82,12 @@ Stolen From https://community.qlik.com/docs/DOC-16813
 ### Given a data set, determine the relationships among data
 #### Some info of Schema's stolen from here https://mindmajix.com/snowflake-and-star-schema-in-qlikview
 
-##### Star schema 
+#### Star schema 
 Star Schema has a single fact table connected to dimension tables and it visualize as a star. In a star schema only one link establishes the relationship between the fact table and any of the dimension tables. It  is a relational database schema for representing multidimensional data. It is the simplest form of the data warehouse schema that contains one or more dimensions and fact tables
 
 ![STAR](https://github.com/mellerbeck/QlikView-Data-Architect/blob/master/Images/star.png)
 
+#### Snowflake schema
 A snowflake schema is an extension of the star schema. In the snowflake schema, the data model may have one or more fact tables, with connected dimension tables, but will also have secondary dimension tables radiating from one or more primary dimension tables. Pure star schemas in large systems or companies are somewhat rare; snowflake schemas are, the more commonly encountered scenarios due to multiple fact tables and more complex and multiple underlying data sources.
 
 ![snowflake](https://github.com/mellerbeck/QlikView-Data-Architect/blob/master/Images/snowflake.png)
@@ -96,6 +97,18 @@ QlikView Data Model best practices dictate that, a star schema is desirable when
 Similarly, if you have a data model with a snowflake schema, working to consolidate the data and build a star schema is usually not going to cause increased performance/ decreased time of query in most cases. This does change with very large data sets, and in those cases, it is worthwhile to spend the time to consolidate and collapse as much as you can, to confirm the star schema.
 
 One of the key considerations is limiting the number of connections required for QlikView to access data, so when working with large data sets, consolidate your data and limit the number of dimension tables, as well as consolidate/concatenate multiple fact tables.
+
+#### Normalize versus Denormalize
+
+Normalize - Normalize means to remove redundancy. 
+Denormalize - Put the redundancy back in!
+
+There was a guy named Norm. When you removed all the Norm and there was just one Norm left. Norm was normalized.
+
+Norm was lonely, and so they went and sewed on some other heads and arms and feet and so on until he was denormalized again.
+
+https://blog.codinghorror.com/maybe-normalizing-isnt-normal/
+
 
 ### Given a data set, determine how the relationships among data will affect the QlikView data model (e.g., performance, accuracy)
 
