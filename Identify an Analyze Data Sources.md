@@ -47,8 +47,32 @@ Same as if you had this .txt file
 
 And you only loaded the Customer and Amount Column, you did not bring in the other columns.
 
+#### Other ways of screwing up data \ Loosely coupled tables (Circular References) \ Synthetic Keys
+Stolen from here https://community.qlik.com/blogs/qlikviewdesignblog/2013/06/25/circular-references
+
+Two fictive friends – Albert and Herbert – live in Trollhättan and Gothenburg, respectively. Albert drives a Volvo and Herbert drives a SAAB.
+
+If the above information is stored in a tabular form, you get the following three tables:
+![Tables](https://github.com/mellerbeck/QlikView-Data-Architect/blob/master/Images/Tables.png)
+
+If you load these tables into QlikView, the circular reference will be identified and you will get the following data model:
+
+![Circular](https://github.com/mellerbeck/QlikView-Data-Architect/blob/master/Images/Circular%20reference.png)
+
+To avoid ambiguous results, QlikView marks one of the tables as “loosely coupled”, which means that the logical inference cannot propagate through this table. In the document properties you can decide which table to use as the loosely coupled table. You will get different results from the logical inference depending on which you choose.
+
+If you load the table only once and link to all three foreign keys, you will most likely get a circular reference. You need to break the circular reference and the solution is of course to load the table several times, once for each role.
 
 ### Given a data set, determine how the data characteristics at the field level will affect the QlikView data model (e.g., performance, accuracy)
+
+#### Sometimes you are just given crap data. For example a comma delimeted file that the data itself contains commas.
+
+Company, Item, Amount
+
+A Cool Company,  Shoes,   500
+A, Bad Company,  Shoes,   400
+
+One fix would be to create the delimeted file using a different dilimiter.
 
 ### Interpret an entity relationship (ER) diagram
 Stolen From https://community.qlik.com/docs/DOC-16813
