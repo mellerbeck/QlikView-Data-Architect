@@ -29,6 +29,23 @@ Likely Cause: Left joining with repeating keys. If you left join a table and the
 Can fix using the lastvalue function with a group by
 
 ### Determine the expected effects of data quality issues
+Sometimes you have to really look at the data to see what will happen. For example Let's say you had a txt file like this
+
+Customer,    Item,     Amount
+A,           ItemA,    100, 1      ,XX
+B,           ItemB,    200, 2      ,ZZ 
+C,           ItemC,    300, 3      ,YY
+
+If you loaded in the Customer, Item and Amount Columns you might get confused about what is in the Amount Field. But guess what, you only loaded in Customer, Item and Amount so pay no attention to other (unlabeled) columns of data.
+
+Same as if you had this .txt file
+Customer,     , Amount,    Tax
+D       , 100 , 200   ,    5
+E       , 500 , 300   ,    6
+F       , 600 , 400   ,    7
+
+And you only loaded the Customer and Amount Column, you did not bring in the other columns.
+
 
 ### Given a data set, determine how the data characteristics at the field level will affect the QlikView data model (e.g., performance, accuracy)
 
