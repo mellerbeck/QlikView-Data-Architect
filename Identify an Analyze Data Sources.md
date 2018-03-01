@@ -39,6 +39,7 @@ Sometimes you have to really look at the data to see what will happen. For examp
 If you loaded in the Customer, Item and Amount Columns you might get confused about what is in the Amount Field. But guess what, you only loaded in Customer, Item and Amount so pay no attention to other (unlabeled) columns of data.
 
 Same as if you had this .txt file
+
     Customer,     , Amount,    Tax
     D       , 100 , 200   ,    5
     E       , 500 , 300   ,    6
