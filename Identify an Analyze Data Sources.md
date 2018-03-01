@@ -91,6 +91,11 @@ A snowflake schema is an extension of the star schema. In the snowflake schema, 
 
 ![snowflake](https://github.com/mellerbeck/QlikView-Data-Architect/blob/master/Images/snowflake.png)
 
+QlikView Data Model best practices dictate that, a star schema is desirable whenever possible. If not a star schema, the smallest possible snowflake schema is fine, especially in limiting the fact tables to one. A scenario may exist, however, where there is only one large fact table containing many dimensions.
+
+Similarly, if you have a data model with a snowflake schema, working to consolidate the data and build a star schema is usually not going to cause increased performance/ decreased time of query in most cases. This does change with very large data sets, and in those cases, it is worthwhile to spend the time to consolidate and collapse as much as you can, to confirm the star schema.
+
+One of the key considerations is limiting the number of connections required for QlikView to access data, so when working with large data sets, consolidate your data and limit the number of dimension tables, as well as consolidate/concatenate multiple fact tables.
 
 ### Given a data set, determine how the relationships among data will affect the QlikView data model (e.g., performance, accuracy)
 
