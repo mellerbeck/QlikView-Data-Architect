@@ -80,6 +80,17 @@ Stolen From https://community.qlik.com/docs/DOC-16813
 ![ER2](https://github.com/mellerbeck/QlikView-Data-Architect/blob/master/Images/ERD2.PNG)
 
 ### Given a data set, determine the relationships among data
+#### Some info of Schema's stolen from here https://mindmajix.com/snowflake-and-star-schema-in-qlikview
+
+##### Star schema 
+Star Schema has a single fact table connected to dimension tables and it visualize as a star. In a star schema only one link establishes the relationship between the fact table and any of the dimension tables. It  is a relational database schema for representing multidimensional data. It is the simplest form of the data warehouse schema that contains one or more dimensions and fact tables
+
+![STAR](https://github.com/mellerbeck/QlikView-Data-Architect/blob/master/Images/star.png)
+
+A snowflake schema is an extension of the star schema. In the snowflake schema, the data model may have one or more fact tables, with connected dimension tables, but will also have secondary dimension tables radiating from one or more primary dimension tables. Pure star schemas in large systems or companies are somewhat rare; snowflake schemas are, the more commonly encountered scenarios due to multiple fact tables and more complex and multiple underlying data sources.
+
+![snowflake](https://github.com/mellerbeck/QlikView-Data-Architect/blob/master/Images/snowflake.png)
+
 
 ### Given a data set, determine how the relationships among data will affect the QlikView data model (e.g., performance, accuracy)
 
