@@ -112,6 +112,43 @@ https://blog.codinghorror.com/maybe-normalizing-isnt-normal/
 
 ### Given a data set, determine how the relationships among data will affect the QlikView data model (e.g., performance, accuracy)
 
+Let's say you had some interesting dates... maybe coming from an AS400 or something
+
+I have a date in an AS400 table in format YYYYMMDD (numeric) https://www.experts-exchange.com/questions/28265035/AS400-date-is-YYYMMDD-in-table-need-MM-DD-YYYY-from-SQL.html
+
+How do you handle them? https://community.qlik.com/docs/DOC-3102
+
+If the date isn’t automatically recognized, you may need to use an interpretation function to
+interpret it: 
+
+```ruby
+Date#( DateField, 'M/D/YY') as Date    
+```
+
+__Make sure you really use an interpretation function and not a formatting function – it should have a
+hash sign “#” in it.__
+ 
+*Also, you should check that QlikView really has interpreted the dates as numbers: Either implicitly
+by checking that the dates are right-aligned in the list box, or explicitly by formatting the dates as
+numbers (Properties – Numbers) and verifying that the numbers displayed have values around
+40000 (for dates in present time).*
+
+Let's say you had a file with just months like this
+MONTH
+JAN
+FEB
+MAR
+APR
+
+You can convert the month names to dual months using
+```ruby
+Month( Date#( Month,'MMM') ) as Month
+```
+
+
+
+
+
 ### LET versus SET
 Just remember SET it and forget it. A LET of 1+1 will equal 2
 A SET (SET it an forget it) will have the literal string
