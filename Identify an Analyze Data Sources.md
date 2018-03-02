@@ -153,7 +153,35 @@ You can convert the month names to dual months using
 Month( Date#( Month,'MMM') ) as Month
 ```
 
+### What if you have multiple date types in a file
+You can use the Alt() function
 
+The alt function returns the first of the parameters that has a valid number representation. If no such match is found, the last parameter will be returned. Any number of parameters can be used. https://help.qlik.com/en-US/qlikview/November2017/Subsystems/Client/Content/Scripting/ConditionalFunctions/alt.htm
+
+Syntax:  
+
+alt(case1[ , case2 , case3 , ...] , else)
+ 
+*The alt function is often used with number or date interpretation functions. This way, QlikView can test different date formats in a prioritized order. It can also be used to handle NULL values in numerical expressions.*
+
+So if you had some crazy dates like
+
+    31.03.1900
+    1956-02-28
+    20111201
+    
+This function would take care of it
+```ruby
+
+Alt( Timestamp#(MixDate,'M/D/YYYY h:mm tt'),
+ Date#(MixDate,'M/D/YYYY'),
+ Date#(MixDate,'D/M/YYYY'),
+ Date#(MixDate,'YYYYMMDD'),
+ Date#(MixDate,'DD.MM.YYYY'),
+ Date#(MixDate,'YYYY-MM-DD')
+ ) as MixDate
+ 
+```
 
 
 
