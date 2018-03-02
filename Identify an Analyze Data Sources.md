@@ -125,6 +125,13 @@ interpret it:
 Date#( DateField, 'M/D/YY') as Date    
 ```
 
+Or for example the date 20180101
+
+```cpp
+Date( Date#( DateField, 'YYYYMMDD'), 'M/D/YYYY') as Date 
+```
+
+
 __Make sure you really use an interpretation function and not a formatting function – it should have a
 hash sign “#” in it.__
  
@@ -134,11 +141,12 @@ numbers (Properties – Numbers) and verifying that the numbers displayed have v
 40000 (for dates in present time).*
 
 Let's say you had a file with just months like this
-MONTH
-JAN
-FEB
-MAR
-APR
+
+    MONTH
+    JAN
+    FEB
+    MAR
+    APR
 
 You can convert the month names to dual months using
 ```ruby
