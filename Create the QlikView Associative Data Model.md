@@ -1,6 +1,14 @@
 ##                                                 Explain methods and considerations for connecting to different types of data sources
 ##                                                 Describe the circumstances under which different load strategies should be used
+
 ##                              Explain the circumstances under which QVD files and/or n-tiered data architectures should be recommended
+
+– Reading from QVD is 10-100 times faster than reading from Data sources.
+– Consolidating data from multiple data sources and databases.Create multi layer QVDs to create a robust data model.
+– Incremental load can be implemented only by using QVDs
+
+
+
 ##                                Describe the use and properties of fact tables and dimension tables
 ##                                Explain load techniques relevant to data transformation
 ##                                Explain the use of QlikView functions to transform data
@@ -25,13 +33,24 @@ After different joins this is what it looks like
 
 ![different](https://github.com/mellerbeck/QlikView-Data-Architect/blob/master/Images/Different%20Joins.png)
 
-
+http://www.qlikfix.com/2010/12/09/merging-tables-concatenation/
 
 
 
 ##                                Given business requirements, determine appropriate section access configuration
-##              Given a scenario, determine how to resolve table association issues (e.g., synthetic keys/circular references, data types)
+
+##           Given a scenario, determine how to resolve table association issues (e.g., synthetic keys/circular references, data types)
+
 ##                                Explain the use of control statements and/or variables
+https://community.qlik.com/blogs/qlikviewdesignblog/2013/11/04/the-magic-of-variables
+
+One useful command is the TRACE command. It allows you to write data to the reload window. 
+https://mindmajix.com/qlikview/how-debugging-works-in-qlikview-script-debugger
+
+The format is:
+TRACE   “string”;
+
+
 ##                                Explain the purpose and functionality of the Table Viewer/System Fields
 https://help.qlik.com/en-US/qlikview/November2017/Subsystems/Client/Content/Table_Viewer.htm
 (Control-T)
