@@ -1,4 +1,4 @@
-### Given a data set, identify quality issues
+###                                                           Given a data set, identify quality issues
 There are many ways to screw up data and data loads.
 
 __REMEMBER__ a LOAD section should close with a semi colon as well as the SQL SELECT section
@@ -28,7 +28,8 @@ Likely Cause: Left joining with repeating keys. If you left join a table and the
 
 Can fix using the lastvalue function with a group by
 
-### Determine the expected effects of data quality issues
+###                                                          Determine the expected effects of data quality issues
+
 Sometimes you have to really look at the data to see what will happen. For example Let's say you had a txt file like this
 
     Customer,    Item,     Amount
@@ -63,7 +64,7 @@ To avoid ambiguous results, QlikView marks one of the tables as “loosely coupl
 
 If you load the table only once and link to all three foreign keys, you will most likely get a circular reference. You need to break the circular reference and the solution is of course to load the table several times, once for each role.
 
-### Given a data set, determine how the data characteristics at the field level will affect the QlikView data model (e.g., performance, accuracy)
+###                                                      Given a data set, determine how the data characteristics at the field level will affect the QlikView data model (e.g., performance, accuracy)
 
 #### Sometimes you are just given crap data. For example a comma delimeted file that the data itself contains commas.
 
@@ -79,7 +80,16 @@ Stolen From https://community.qlik.com/docs/DOC-16813
 ![ER](https://github.com/mellerbeck/QlikView-Data-Architect/blob/master/Images/ERD1.PNG)
 ![ER2](https://github.com/mellerbeck/QlikView-Data-Architect/blob/master/Images/ERD2.PNG)
 
-### Given a data set, determine the relationships among data
+###                              Given a data set, determine the relationships among data
+
+#### Performancing enhancements
+How can you reduce memory and optimize applications? http://bi-review.blogspot.com/2013/08/few-tips-for-dealing-with-large.html
+
+_One of ways to reduce calculation times is denormalization of the data model. Although, there should be a reasonable balance since denormalization usually increases memory consumption._
+
+
+
+
 #### Some info of Schema's stolen from here https://mindmajix.com/snowflake-and-star-schema-in-qlikview
 
 #### Star schema 
@@ -185,6 +195,26 @@ Alt( Timestamp#(MixDate,'M/D/YYYY h:mm tt'),
 
 
 
-### LET versus SET
+###                                                              LET versus SET
 Just remember SET it and forget it. A LET of 1+1 will equal 2
 A SET (SET it an forget it) will have the literal string
+
+###                                                              Joins
+Because you know I'm all about that Joins
+'bout that joins, more data
+
+Yeah, it's pretty clear the first is an INNER JOIN
+It returns the records that are matching in both tables
+
+Yeah, my momma she told me don't worry about your joins
+She says, a LEFT JOIN returns all the records that are on the LEFT
+You know and the matched records from the right table.
+
+If you want the opposite then use a RIGHT JOIN
+Returns all the records on the RIGHT and matched records from the LEFT
+
+To get every inch of perfect data use a FULL OUTER JOIN
+
+
+
+
