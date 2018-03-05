@@ -45,10 +45,15 @@ http://www.qlikfix.com/2010/12/09/merging-tables-concatenation/
 https://community.qlik.com/blogs/qlikviewdesignblog/2013/11/04/the-magic-of-variables
 
 One useful command is the TRACE command. It allows you to write data to the reload window. 
-https://mindmajix.com/qlikview/how-debugging-works-in-qlikview-script-debugger
+http://www.johndaniel.com/index.php/how-to-use-the-trace-function-to-track-down-problems-in-qlikview/
 
-The format is:
-TRACE   “string”;
+    The format is:
+    TRACE   “string”;
+
+https://help.qlik.com/en-US/qlikview/November2017/Subsystems/Client/Content/Scripting/ScriptRegularStatements/Trace.htm
+    
+    Let MyMessage = NoOfRows('MainTable') & ' rows in Main Table';
+    Trace $(MyMessage);
 
 
 ##                                Explain the purpose and functionality of the Table Viewer/System Fields
