@@ -19,7 +19,7 @@ https://community.qlik.com/docs/DOC-7520
     RIGHT
     OUTER
     
-![twotables](https://github.com/mellerbeck/QlikView-Data-Architect/blob/master/Images/01Error.jpg)
+![twotables](https://github.com/mellerbeck/QlikView-Data-Architect/blob/master/Images/Two%20Tables.png)
 
 After different joins this is what it looks like
 
