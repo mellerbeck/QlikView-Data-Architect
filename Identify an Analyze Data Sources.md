@@ -1,6 +1,11 @@
 ###                                                           Given a data set, identify quality issues
 There are many ways to screw up data and data loads.
 
+#### An easy and typical error with hand typed data is inconsistency accross fields. For example
+U.S.
+US
+USA
+
 __REMEMBER__ a LOAD section should close with a semi colon as well as the SQL SELECT section
 
 Stolen from here http://livingqlikview.com/common-pitfalls-qlik-scripting/
@@ -65,6 +70,8 @@ To avoid ambiguous results, QlikView marks one of the tables as “loosely coupl
 If you load the table only once and link to all three foreign keys, you will most likely get a circular reference. You need to break the circular reference and the solution is of course to load the table several times, once for each role.
 
 ###                                                      Given a data set, determine how the data characteristics at the field level will affect the QlikView data model (e.g., performance, accuracy)
+
+#### Remember Qlikview magic only happens (i.e. fields only associate if they are aliased to the same name!)
 
 #### Sometimes you are just given crap data. For example a comma delimeted file that the data itself contains commas.
 
@@ -193,6 +200,9 @@ Alt( Timestamp#(MixDate,'M/D/YYYY h:mm tt'),
  
 ```
 
+#### Concatenating and adding fields is a good way of optimizing performance 
+http://www.qliktips.com/2013/10/flags-and-dual-values-in-set-analysis.html
+
 
 
 ###                                                              LET versus SET
@@ -214,7 +224,6 @@ If you want the opposite then use a RIGHT JOIN
 Returns all the records on the RIGHT and matched records from the LEFT
 
 To get every inch of perfect data use a FULL OUTER JOIN
-
 
 
 
