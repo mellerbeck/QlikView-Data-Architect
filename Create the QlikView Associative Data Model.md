@@ -25,6 +25,20 @@ Next vFile
 ```
 
 ##                                                 Describe the circumstances under which different load strategies should be used
+Sometimes you want to limit data when you bring it in. Let's say you want to limit the amount of data to the current year (less data means qlikview performs better) One way is to use the Left keep.
+
+http://livingqlikview.com/livingqlik-roots-reducing-rows-columns-qlik-data-model/
+
+* Another way to explain this is that QlikView will pretend to join the Item table to the Sale table, using like fields to figure out  what the joined set would be, but after figuring that out, QlikView will NOT really join the two tables. The left part of the        function is the part that does the data reduction. Because it is a left keep, we are retaining all the records in the left table      (Sale), will be losing unmatched records in the right table (Item) and will be Keeping them separate rather than Joining them       together.
+
+Or you can use the Where Exists
+
+* The Where Exists function asks QlikView to compare the currently loading field with a previously loaded field. Where a match is found, the entire row is loaded. Where there is no match, the entire row is discarded. In the first example below, you will notice that we use the parentheses to denote the field that will be compared. When used with one parameter, we are expecting that the field we are loading exactly matches the name of a previously loaded field.
+
+When using the 2 parameter version, the second parameter is asking for the original name of the field. Therefore, if you are aliasing the field in the upper part of the load statement, you will list the original field name in the exists clause rather than the alias.
+You can also create an expression to obtain the second parameter. Sometimes the comparison you are making might require 2 or more fields be combined. Feel free to create a concatenated key inside the second parameter.
+
+
 
 ##                              Explain the circumstances under which QVD files and/or n-tiered data architectures should be recommended
 
