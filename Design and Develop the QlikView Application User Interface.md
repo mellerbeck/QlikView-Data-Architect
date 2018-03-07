@@ -48,6 +48,18 @@ But if you wanted to ignore selections in say the countryName you would do
 
 ## Explain how to implement Actions/Triggers in the QlikView interface
 
+https://help.qlik.com/en-US/qlikview/November2017/Subsystems/Client/Content/Document_Properties_Triggers.htm
+
+Triggers are a complex subject, you can do a lot with them. A simple example,
+
+an OnOpen trigger
+
+You can use this to set a variable, select in field etc...
+
+OnAnySelect - anything selection in any field
+
+__Cascading actions are not supported__
+
 
 ## Given a scenario, determine the appropriate object or chart type to use
 
@@ -68,9 +80,25 @@ https://help.qlik.com/en-US/sense/September2017/Subsystems/Hub/Content/Visualiza
 Sliders are useful for this because they can change variables.
 Also, input boxes are useful because you can type values and update things in accordance.
 
+A trick you can use to have a custom sort on an object is to the use the Dual
+http://qlikfornewbies.blogspot.com/2015/12/qvnewbie5-dual-function-in-qlikview_18.html
 
+Qlikview will sort based on the number, but you can still see the textual display.
+http://www.qlikfix.com/2010/12/27/creating-a-custom-sort-order-load-order-dual/
 
 ## Explain the purpose/functionality of common object properties
+
+Sometimes in charts you want the colors to persist. http://www.qlikfix.com/2010/12/17/consistent-dimension-colors/
+
+There are a couple of ways to do this. You can script the values into the load script.
+You can also check the check box called Persistent Colors.
+
+Sometimes in charts you don't want the data to display until a selection has been made. This is done using the Calculate Condition property.
+
+The Current Selections box is a quick and easy way to show the selections (although I like to use a more minimalized version)
+Sometimes you might want to show the selections within a caption. In this case you can use the
+
+    GetCurrentSelections()
 
 
 ## Given a scenario, determine the appropriate application performance tuning option to use
