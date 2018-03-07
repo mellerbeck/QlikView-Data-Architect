@@ -125,6 +125,31 @@ http://www.qlikfix.com/2010/12/27/creating-a-custom-sort-order-load-order-dual/
 
 ## Explain the purpose/functionality of common object properties
 
+Within say a straight table there are also many sub options. For example, under the Dispaly options you can choose
+```
+Text
+Image
+Circular Gauge
+Linear Gauge
+Traffic Light Gauge
+LED Gauge
+Mini Chart
+Link
+```
+Within the Mini Chart Settings you have yet more options!
+```
+Sparkline
+Line with dots
+Dots
+Bars
+Whiskers
+```
+
+A useful way of adding additional information about a chart to help your users is the Help Text property.
+You can type this in on the Caption tab of an object.
+
+
+
 Sometimes in charts you want the colors to persist. http://www.qlikfix.com/2010/12/17/consistent-dimension-colors/
 
 There are a couple of ways to do this. You can script the values into the load script.
@@ -140,7 +165,8 @@ Sometimes you might want to show the selections within a caption. In this case y
 
 ## Given a scenario, determine the appropriate application performance tuning option to use
 
-
+Not really tuning, but if you need to change the screen size of your design window you can go to view, resize window, and then
+change the resolution. 
 
 
 ## Given a scenario, determine the appropriate reload performance tuning option to use
