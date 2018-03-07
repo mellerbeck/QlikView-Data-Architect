@@ -45,6 +45,38 @@ But if you wanted to ignore selections in say the countryName you would do
 
 ## Given a scenario, determine the appropriate function or complex expression to use
 
+Buckets, buckets, buckets. https://community.qlik.com/blogs/qlikviewdesignblog/2014/07/14/buckets
+
+Simple way is nested if statements.
+
+```ruby
+
+   If( ShippedDate - RequiredDate <= -5, 'Too early',
+   If( ShippedDate - RequiredDate <= 0, 'Just in time',
+   If( ShippedDate - RequiredDate <= 5, 'Small delay',
+      'Large delay' ))) as Delay,
+```
+
+Second option Round or Class
+
+```ruby
+Round( ShippedDate - RequiredDate , 5 ) as Delay,
+Class( ShippedDate - RequiredDate , 5 ) as Delay,
+```
+
+Third option is IntervalMatch
+
+```ruby
+DelayClasses:
+Load Lower, Upper, Delay Inline
+[Lower, Upper, Delay
+-E99,-5,Too early
+-4,0,Just in time
+1,5,Small delay
+6,E99,Large delay];
+IntervalMatch (DelayInDays)
+Load Lower, Upper Resident DelayClasses;
+```
 
 ## Explain how to implement Actions/Triggers in the QlikView interface
 
@@ -62,6 +94,11 @@ __Cascading actions are not supported__
 
 
 ## Given a scenario, determine the appropriate object or chart type to use
+
+One advanced way of adding your own visualizations is through extensions and mashups.
+https://help.qlik.com/en-US/qlikview-developer/November2017/Subsystems/Mashups/Content/mashups-start.htm
+
+
 
 https://help.qlik.com/en-US/sense/September2017/Subsystems/Hub/Content/Visualizations/when-to-use-what-type-of-visualization.htm
 
