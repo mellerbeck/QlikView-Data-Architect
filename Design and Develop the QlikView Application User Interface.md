@@ -64,6 +64,10 @@ https://help.qlik.com/en-US/sense/September2017/Subsystems/Hub/Content/Visualiza
     Display correlation             - Scatter plot
     Display numbers and values      - Table
     
+### A common qlikview requirement is doing some whatif Analysis. 
+Sliders are useful for this because they can change variables.
+Also, input boxes are useful because you can type values and update things in accordance.
+
 
 
 ## Explain the purpose/functionality of common object properties
@@ -96,11 +100,7 @@ Script Example:
 
 Buffer (Incremental) Load * From LogFile.txt (ansi, txt, delimiter is '\t', embedded labels);
 
- 
-
 Buffer Load:
-
- 
 
 The syntax is:
 
