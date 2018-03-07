@@ -38,7 +38,14 @@ Or you can use the Where Exists
 When using the 2 parameter version, the second parameter is asking for the original name of the field. Therefore, if you are aliasing the field in the upper part of the load statement, you will list the original field name in the exists clause rather than the alias.
 You can also create an expression to obtain the second parameter. Sometimes the comparison you are making might require 2 or more fields be combined. Feel free to create a concatenated key inside the second parameter.
 
+### Random sort of related. Tagging Fields whilst loading
 
+Tag
+This script function provides a way of assigning tags to one or more fields. If an attempt to tag a field name not present in the document is made, the tagging will be ignored. If conflicting occurrences of a field or tag name are found, the last value is used.
+
+Syntax:  
+
+Tag fields fieldlist using mapname Tag field fieldname with tagname
 
 ##                              Explain the circumstances under which QVD files and/or n-tiered data architectures should be recommended
 
