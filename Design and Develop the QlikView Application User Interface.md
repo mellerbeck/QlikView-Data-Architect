@@ -34,7 +34,9 @@ codes
     DZ        Algeria
 
 You wanted your set to be AF and AX so Code={AF,AX}
-But if you wanted to ignore selections in say the countryName
+But if you wanted to ignore selections in say the countryName you would do 
+
+    <Code={AF,AX},countryName=>
 
 
 ## Identify where alternate uses of expressions are appropriate
@@ -47,6 +49,20 @@ But if you wanted to ignore selections in say the countryName
 
 
 ## Given a scenario, determine the appropriate object or chart type to use
+
+https://help.qlik.com/en-US/sense/September2017/Subsystems/Hub/Content/Visualizations/when-to-use-what-type-of-visualization.htm
+
+    Side by side -                  - Bar chart
+    Absolute and relative values    - Combo chart
+    Selections to reduce data set   - 
+    Indicate ratio                  - Gauge
+    Trends over time                - Line chart
+    Point and area data             - Map
+    Ratio to total                  - Pie
+    Cross table view and summarize  - Pivot
+    Display correlation             - Scatter plot
+    Display numbers and values      - Table
+    
 
 
 ## Explain the purpose/functionality of common object properties
