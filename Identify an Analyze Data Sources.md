@@ -94,7 +94,8 @@ How can you reduce memory and optimize applications? http://bi-review.blogspot.c
 
 _One of ways to reduce calculation times is denormalization of the data model. Although, there should be a reasonable balance since denormalization usually increases memory consumption._
 
-
+Another way is by splitting fields to more efficiently store values.
+https://community.qlik.com/docs/DOC-5462
 
 
 #### Some info of Schema's stolen from here https://mindmajix.com/snowflake-and-star-schema-in-qlikview
