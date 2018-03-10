@@ -167,6 +167,10 @@ Sometimes you might want to show the selections within a caption. In this case y
 
     GetCurrentSelections()
 
+### One very useful thing to do is add help text to your objects. To do this go to properties, Caption, Help Text. Once you populate the field a ? mark will show up that if they click will show the help text.
+
+
+
 
 ## Given a scenario, determine the appropriate application performance tuning option to use
 
