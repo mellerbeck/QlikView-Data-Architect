@@ -138,5 +138,21 @@ __Subset ratio__ is the number of distinct values of this field found in this ta
 
 
 ##                                Determine the root cause for discrepancies between values in legacy reports and QlikView values
+
 ##                                Explain the purpose and functionality of QlikView troubleshooting tools or functions
+
 ##                                Given a script, determine the cause and/or solution for a script error
+
+Not related to errors (well I suppose it could cause one) these are the methods you can use for commenting Qlikview Script.
+From https://help.qlik.com/en-US/qlikview/12.0/Subsystems/Client/Content/LoadData/comment-in-script.htm
+
+REM is useful because it will comment everything until it hits the next semicolon. 
+
+Rem This is a comment ;
+ 
+/* This is a comment 
+   that spans two lines */
+ 
+// This is a comment as well
+
+forward slash forward slash -  All text on a line that follows to the right of // (two forward slashes) will be considered a comment and will not be executed when the script is run.
