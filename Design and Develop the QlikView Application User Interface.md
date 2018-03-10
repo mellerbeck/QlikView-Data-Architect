@@ -112,6 +112,11 @@ https://help.qlik.com/en-US/sense/September2017/Subsystems/Hub/Content/Visualiza
     Cross table view and summarize  - Pivot
     Display correlation             - Scatter plot
     Display numbers and values      - Table
+    Containers                      - Can hold all other objects
+
+There are ways to make one chart work like multiple charts! You can enable the fast type change setting and choose the charts you want to allow it to be able to change to.
+
+
     
 ### A common qlikview requirement is doing some whatif Analysis. 
 Sliders are useful for this because they can change variables.
