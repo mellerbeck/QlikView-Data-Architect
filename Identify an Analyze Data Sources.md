@@ -97,6 +97,8 @@ _One of ways to reduce calculation times is denormalization of the data model. A
 Another way is by splitting fields to more efficiently store values.
 https://community.qlik.com/docs/DOC-5462
 
+Fat is sometimes better
+http://livingqlikview.com/sometimes-fat-is-better/
 
 #### Some info of Schema's stolen from here https://mindmajix.com/snowflake-and-star-schema-in-qlikview
 
