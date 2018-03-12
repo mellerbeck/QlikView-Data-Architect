@@ -216,4 +216,36 @@ amount is a number specifying the time period. Decimals may be used. The unit is
 
 The incremental option enables the ability to read only part of an underlying file. Previous size of the file is stored in the XML header in the QVD file. This is particularly useful with log files. All records loaded at a previous occasion are read from the QVD file whereas the following new records are read from the original source and finally an updated QVD-file is created. Note that the incremental option can only be used with load statements and text files and that incremental load cannot be used where old data is changed or deleted!
     
+## Other random topics
+
+### how to calculate subset ratio. Subset ratio is the number of distinct values of this field found in this table as compared to the total number of distinct values of this field (that is other tables as well).
+
+https://help.qlik.com/en-US/qlikview/November2017/Subsystems/Client/Content/Table_Viewer.htm
+https://community.qlik.com/thread/80776
+
+See the example below there are five unique occurences in the field F1 (numbers 1-5). The subset ratio in table A is 60% (3/5, ie 3 unique occurences as compared to 4 rows in the table). In table B the subset ratio will be 80% (numbers 1, 2, 4 and 5 as compared to the total the numbers 1-5, ie 4/5).
+
+```ruby
+A:
+LOAD * INLINE [
+    F1, F2
+    1, A
+    2, B
+    3, C
+    3, Cbis
+];
+
+B:
+LOAD * INLINE [
+    F1, F3
+    1, I
+    2, II
+    4,  IV
+    5, V
+];
+```
+
+
+
+
 
