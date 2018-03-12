@@ -83,6 +83,11 @@ A, Bad Company,  Shoes,   400
 One fix would be to create the delimeted file using a different dilimiter.
 
 ### Interpret an entity relationship (ER) diagram
+
+OK, this post finally made me see the light
+https://docs.microsoft.com/en-us/common-data-service/entity-reference/relationships
+
+
 Stolen From https://community.qlik.com/docs/DOC-16813
 ![ER](https://github.com/mellerbeck/QlikView-Data-Architect/blob/master/Images/ERD1.PNG)
 ![ER2](https://github.com/mellerbeck/QlikView-Data-Architect/blob/master/Images/ERD2.PNG)
