@@ -87,6 +87,13 @@ Stolen From https://community.qlik.com/docs/DOC-16813
 ![ER](https://github.com/mellerbeck/QlikView-Data-Architect/blob/master/Images/ERD1.PNG)
 ![ER2](https://github.com/mellerbeck/QlikView-Data-Architect/blob/master/Images/ERD2.PNG)
 
+More http://www.vertabelo.com/blog/technical-articles/crow-s-foot-notation
+
+And More
+
+https://www.slideshare.net/IngePowell/erd-cardinality
+
+
 ###                              Given a data set, determine the relationships among data
 
 #### Performancing enhancements
