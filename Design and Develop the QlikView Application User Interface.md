@@ -15,11 +15,13 @@ Set analysis is really just a selection! ( A fancy one of course)
 Broken into 3 categories. 
 
 ### Identifiers
+```
 0 - empty set
 1 - full set
 $ - Current selection
 $1 - Previous selection
 $_1 - Next Selection
+```
 
 Example
 sum({1} Sales) - Disregards selections
